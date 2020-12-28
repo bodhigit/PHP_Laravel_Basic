@@ -1,0 +1,37 @@
+######################## Install Laravel on Windows ###################################
+
+1)Download and install XAMPP 7.4.6 from 
+https://www.apachefriends.org/xampp-files/7.4.6/xampp-windows-x64-7.4.6-0-VC15-installer.exe
+
+2)Set PHP - System Envirounment Path
+
+##Sysdm.cpl -->Advanced-->Environment Variable
+In System Variable Panel--> Select Path and Click Edit-->NEW-->set path F:\XAMPP2020\php
+
+## In System Variable Panel-->NEW-->Set Variable Name : "PHPRC" and Set Variable Value : F:\XAMPP2020\php
+
+3)Install Composer from
+https://getcomposer.org/Composer-Setup.exe
+
+4)Set Composer path 
+Windows: %USERPROFILE%\AppData\Roaming\Composer\vendor\bin
+
+5)Restart Computer
+
+6)Laravel installer using Composer: 
+composer global require laravel/installer
+
+7)Laravel new command will create a fresh Laravel installation in the directory you specify.
+laravel new FolderName
+
+OR
+
+Alternatively, you may also install Laravel by issuing the Composer create-project command in your terminal:
+composer create-project --prefer-dist laravel/laravel folderName
+
+8)Local Development Server
+If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Artisan command. This command will start a development server at http://localhost:8000:
+
+php artisan serve
+
+
